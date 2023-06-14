@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "export PATH=\$PATH:/action" | tee -a ~/.bashrc > /dev/null ; source ~/.bashrc
+echo $((`echo $PATH | grep -o ":/" | wc -l`+ 1))
